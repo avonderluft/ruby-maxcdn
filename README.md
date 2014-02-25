@@ -13,6 +13,7 @@ gem install maxcdn
 ```
 
 > Requires Ruby 1.9.2+ (see: [Travis](https://travis-ci.org/MaxCDN/ruby-maxcdn) for passing Ruby versions.)
+
 > Limited local compatibility testing with Ruby 1.8.7 successful
 
 #### With Bundler
