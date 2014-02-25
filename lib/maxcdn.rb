@@ -100,7 +100,9 @@ module MaxCDN
     end
 
     [ :post, :get, :put, :delete ].each do |method|
-      define_method(method) do |uri, data={}, options={}|
+      # remove empty hash assignment for Ruby 1.8.7 compatibility
+      # define_method(method) do |uri, data={}, options={}|
+      define_method(method) do |uri, data, options|
         options[:body] ||= true if method != :get
         self._response_as_json method.to_s, uri, options, data
       end
